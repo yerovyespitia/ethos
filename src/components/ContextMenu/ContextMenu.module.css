@@ -1,0 +1,15 @@
+/* Copyright (C) 2017-2026 Smart code 203358507 */
+
+.context-menu-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.context-menu-container .context-menu {
+  position: fixed;
+  border-radius: var(--border-radius);
+  background-color: var(--modal-background-color);
+  box-shadow: 0 1.35rem 2.7rem hsla(0, 0%, 0%, 0.4), 0 1.1rem 0.85rem hsla(0, 0%, 0%, 0.2);
+}

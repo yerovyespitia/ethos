@@ -1,0 +1,11 @@
+/* Copyright (C) 2017-2026 Smart code 203358507 */
+
+:import('../components/Option/Option.module.css') {
+  option-icon: icon;
+}
+.trakt-container {
+  margin-top: 2rem;
+}
+.trakt-container .option-icon {
+  color: var(--color-trakt) !important;
+}

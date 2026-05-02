@@ -1,0 +1,213 @@
+/* Copyright (C) 2017-2023 Smart code 203358507 */
+.addon-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 1.5rem;
+  border: 0.15rem solid transparent;
+  border-radius: var(--border-radius);
+  background-color: var(--overlay-color);
+  transition: border-color 0.1s ease-out;
+  cursor: pointer;
+}
+.addon-container:hover {
+  border-color: var(--overlay-color);
+}
+.addon-container .logo-container {
+  flex: none;
+  width: 8rem;
+  height: 8rem;
+}
+.addon-container .logo-container .logo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem;
+  object-fit: contain;
+  object-position: center;
+}
+.addon-container .logo-container .icon {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  color: var(--primary-foreground-color);
+}
+.addon-container .info-container {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: baseline;
+  padding: 0 0.5rem;
+}
+.addon-container .info-container .name-container {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  padding: 0 0.5rem;
+  max-height: 3.6em;
+  font-size: 1.6rem;
+  color: var(--primary-foreground-color);
+}
+.addon-container .info-container .version-container {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  margin-top: 0.5rem;
+  padding: 0 0.5rem;
+  max-height: 2.4em;
+  color: var(--primary-foreground-color);
+  opacity: 0.6;
+}
+.addon-container .info-container .types-container {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 100%;
+  margin-top: 0.5rem;
+  padding: 0 0.5rem;
+  max-height: 2.4em;
+  color: var(--primary-foreground-color);
+  text-transform: capitalize;
+  opacity: 0.4;
+}
+.addon-container .info-container .description-container {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 100%;
+  margin-top: 0.5rem;
+  padding: 0 0.5rem;
+  color: var(--primary-foreground-color);
+}
+.addon-container .buttons-container {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 17rem;
+}
+.addon-container .buttons-container .action-buttons-container {
+  flex: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+.addon-container .buttons-container .install-button-container,
+.addon-container .buttons-container .configure-button-container,
+.addon-container .buttons-container .uninstall-button-container,
+.addon-container .buttons-container .share-button-container {
+  flex: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  height: 3.5rem;
+  padding: 0 1rem;
+  border-radius: 4rem;
+}
+.addon-container .buttons-container .install-button-container .icon,
+.addon-container .buttons-container .configure-button-container .icon,
+.addon-container .buttons-container .uninstall-button-container .icon,
+.addon-container .buttons-container .share-button-container .icon {
+  flex: none;
+  width: 2rem;
+  height: 2rem;
+}
+.addon-container .buttons-container .install-button-container .label,
+.addon-container .buttons-container .configure-button-container .label,
+.addon-container .buttons-container .uninstall-button-container .label,
+.addon-container .buttons-container .share-button-container .label {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  max-height: 2.4em;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-align: center;
+}
+.addon-container .buttons-container .install-button-container {
+  background-color: var(--secondary-accent-color);
+}
+.addon-container .buttons-container .install-button-container:hover {
+  outline: var(--focus-outline-size) solid var(--secondary-accent-color);
+  background-color: transparent;
+}
+.addon-container .buttons-container .install-button-container .label {
+  color: var(--primary-foreground-color);
+}
+.addon-container .buttons-container .configure-button-container {
+  flex: none;
+  background-color: var(--secondary-accent-color);
+}
+.addon-container .buttons-container .configure-button-container:hover {
+  outline: var(--focus-outline-size) solid var(--secondary-accent-color);
+  background-color: transparent;
+}
+.addon-container .buttons-container .configure-button-container .icon {
+  color: var(--primary-foreground-color);
+}
+.addon-container .buttons-container .uninstall-button-container {
+  outline-color: var(--primary-foreground-color);
+  outline-style: solid;
+  opacity: 0.3;
+}
+.addon-container .buttons-container .uninstall-button-container:hover {
+  opacity: 1;
+}
+.addon-container .buttons-container .uninstall-button-container .label {
+  color: var(--primary-foreground-color);
+}
+.addon-container .buttons-container .share-button-container {
+  opacity: 0.9;
+}
+.addon-container .buttons-container .share-button-container:hover .label {
+  text-decoration: underline;
+}
+.addon-container .buttons-container .share-button-container .icon {
+  height: 1.5rem;
+  width: 1.5rem;
+  color: var(--primary-foreground-color);
+}
+.addon-container .buttons-container .share-button-container .label {
+  color: var(--primary-foreground-color);
+}
+@media only screen and (max-width: 640px) {
+  .addon-container {
+    flex-wrap: wrap;
+  }
+  .addon-container .info-container {
+    margin-left: 0.5rem;
+    padding: 0;
+  }
+  .addon-container .info-container .name-container {
+    max-height: none;
+    font-size: 1.3rem;
+  }
+  .addon-container .buttons-container {
+    flex: 0 1 100%;
+    width: auto;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .addon-container .buttons-container .share-button-container {
+    flex: none;
+  }
+  .addon-container .buttons-container .share-button-container .icon {
+    margin-right: 0;
+  }
+  .addon-container .buttons-container .share-button-container .label {
+    display: none;
+  }
+  .addon-container .buttons-container .install-button-container,
+  .addon-container .buttons-container .uninstall-button-container {
+    flex-basis: 100%;
+    margin-right: 1rem;
+  }
+}

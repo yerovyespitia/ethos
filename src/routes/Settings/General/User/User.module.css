@@ -1,0 +1,75 @@
+/* Copyright (C) 2017-2026 Smart code 203358507 */
+
+.user {
+  gap: 1rem;
+}
+.user .user-info-content {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.user .user-info-content .avatar-container {
+  flex: none;
+  align-self: stretch;
+  height: 5rem;
+  width: 5rem;
+  margin-right: 1rem;
+  border: 2px solid var(--primary-accent-color);
+  border-radius: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-origin: content-box;
+  background-clip: content-box;
+  opacity: 0.9;
+  background-color: var(--primary-foreground-color);
+}
+.user .user-info-content .email-logout-container {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.user .user-info-content .email-logout-container .email-label-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.user .user-info-content .email-logout-container .email-label-container .email-label {
+  flex: 1;
+  font-size: 1.1rem;
+  color: var(--primary-foreground-color);
+  opacity: 0.7;
+}
+.user .user-panel-container {
+  flex: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 10rem;
+  height: 3.5rem;
+  border-radius: 3.5rem;
+  background-color: var(--overlay-color);
+}
+.user .user-panel-container:hover {
+  outline: var(--focus-outline-size) solid var(--primary-foreground-color);
+  background-color: transparent;
+}
+.user .user-panel-container .user-panel-label {
+  flex: 1;
+  max-height: 2.4em;
+  padding: 0 0.5rem;
+  font-weight: 500;
+  text-align: center;
+  color: var(--primary-foreground-color);
+}
+@media only screen and (max-width: 640px) {
+  .user {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .user .user-panel-container {
+    width: 100% !important;
+  }
+}

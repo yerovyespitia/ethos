@@ -1,0 +1,134 @@
+/* Copyright (C) 2017-2024 Smart code 203358507 */
+.horizontal-nav-bar-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--horizontal-nav-bar-size);
+  padding-right: 1rem;
+  background-color: transparent;
+  overflow: visible;
+  padding-top: calc(var(--safe-area-inset-top) + var(--desktop-window-controls-offset-top));
+  box-sizing: content-box;
+  -webkit-app-region: drag;
+}
+.horizontal-nav-bar-container .logo-container {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--vertical-nav-bar-size);
+  height: var(--horizontal-nav-bar-size);
+}
+.horizontal-nav-bar-container .logo-container .logo {
+  flex: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  object-position: center;
+  object-fit: contain;
+  opacity: 0.9;
+}
+.horizontal-nav-bar-container .back-button-container {
+  margin-left: max(0rem, calc(1rem - var(--safe-area-inset-left)));
+  -webkit-app-region: no-drag;
+}
+.horizontal-nav-bar-container .title {
+  flex: 4 0 0;
+  padding: 0 1rem;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.01rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: hsla(222.8, 100%, 78%, 0.9);
+}
+.horizontal-nav-bar-container .search-bar {
+  height: 3.25rem;
+  width: 30rem;
+  -webkit-app-region: no-drag;
+}
+.horizontal-nav-bar-container .buttons-container {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  overflow: visible;
+  -webkit-app-region: no-drag;
+}
+.horizontal-nav-bar-container .button-container {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 0.75rem;
+  opacity: 0.6;
+  -webkit-app-region: no-drag;
+}
+.horizontal-nav-bar-container .button-container.back-button-container,
+.horizontal-nav-bar-container .button-container.menu-button-container,
+.horizontal-nav-bar-container .button-container.back-button-container:global(.active),
+.horizontal-nav-bar-container .button-container.menu-button-container:global(.active) {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 100%;
+  background-color: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  opacity: 1;
+}
+.horizontal-nav-bar-container .button-container .icon {
+  flex: none;
+  width: 2rem;
+  height: 2rem;
+  color: var(--primary-foreground-color);
+  opacity: 0.6;
+}
+.horizontal-nav-bar-container .button-container.back-button-container .icon,
+.horizontal-nav-bar-container .button-container.menu-button-container .icon,
+.horizontal-nav-bar-container .button-container.back-button-container:global(.active) .icon,
+.horizontal-nav-bar-container .button-container.menu-button-container:global(.active) .icon {
+  width: 1.65rem;
+  height: 1.65rem;
+  color: var(--primary-foreground-color);
+  opacity: 0.8;
+}
+.horizontal-nav-bar-container .button-container:global(.active) {
+  background-color: var(--overlay-color);
+  opacity: 1;
+}
+.horizontal-nav-bar-container .button-container:global(.active) .icon {
+  color: var(--primary-foreground-color);
+  opacity: 0.8;
+}
+@media (pointer: fine) {
+  .horizontal-nav-bar-container .button-container:hover {
+    background-color: var(--overlay-color);
+    opacity: 1;
+  }
+  .horizontal-nav-bar-container .button-container:hover .icon {
+    color: var(--primary-foreground-color);
+    opacity: 0.8;
+  }
+.horizontal-nav-bar-container .button-container.back-button-container:hover,
+.horizontal-nav-bar-container .button-container.menu-button-container:hover {
+    border-radius: 100%;
+    background-color: rgba(255, 255, 255, 0.28);
+  }
+}
+@media only screen and (max-width: 640px) {
+  .horizontal-nav-bar-container {
+    justify-content: space-between;
+    padding-right: 0;
+  }
+  .horizontal-nav-bar-container .logo-container {
+    width: var(--horizontal-nav-bar-size);
+  }
+  .horizontal-nav-bar-container .button-container {
+    margin: 0 1rem;
+  }
+  .horizontal-nav-bar-container .button-container:not(.back-button-container):not(.menu-button-container) {
+    display: none;
+  }
+}

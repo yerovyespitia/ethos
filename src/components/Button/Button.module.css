@@ -1,0 +1,14 @@
+/* Copyright (C) 2017-2024 Smart code 203358507 */
+.button-container {
+  outline-width: var(--focus-outline-size);
+  outline-color: hsl(0, 0%, 100%);
+  outline-offset: calc(-1 * var(--focus-outline-size));
+  cursor: pointer;
+}
+.button-container:focus {
+  outline-style: solid;
+}
+.button-container:global(.disabled) {
+  pointer-events: none;
+  opacity: 0.5;
+}

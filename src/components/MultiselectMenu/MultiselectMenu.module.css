@@ -1,0 +1,46 @@
+/* Copyright (C) 2017-2024 Smart code 203358507 */
+.multiselect-menu {
+  position: relative;
+  min-width: 8.5rem;
+  overflow: visible;
+  border-radius: 2.75rem;
+}
+.multiselect-menu.disabled {
+  pointer-events: none;
+  opacity: 0.3;
+}
+.multiselect-menu .multiselect-button {
+  height: 3rem;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 2.75rem;
+}
+.multiselect-menu .multiselect-button .label {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1;
+  color: var(--primary-foreground-color);
+}
+.multiselect-menu .multiselect-button .icon {
+  flex: none;
+  width: 1rem;
+  display: block;
+  color: var(--primary-foreground-color);
+  opacity: 0.6;
+}
+.multiselect-menu .multiselect-button .icon.open {
+  transform: rotate(180deg);
+}
+.multiselect-menu:hover,
+.multiselect-menu.active {
+  background-color: var(--overlay-color);
+}

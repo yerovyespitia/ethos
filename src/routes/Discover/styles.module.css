@@ -1,0 +1,268 @@
+/* Copyright (C) 2017-2024 Smart code 203358507 */
+:import('../../components/Multiselect/styles.module.css') {
+  multiselect-menu-container: menu-container;
+  multiselect-modal-container: modal-container;
+  multiselect-option-container: option-container;
+  multiselect-icon: icon;
+  multiselect-label: label;
+}
+:import('../../components/ModalDialog/styles.module.css') {
+  selectable-inputs-modal-container: modal-dialog-container;
+  selectable-inputs-modal-content: modal-dialog-content;
+}
+.discover-container {
+  height: calc(100% - var(--safe-area-inset-bottom));
+  background-color: transparent;
+}
+.discover-container .discover-content {
+  width: 100%;
+  height: 100%;
+  margin-bottom: calc(var(--bottom-overlay-size) * -1);
+  display: flex;
+  flex-direction: row;
+}
+.discover-container .discover-content .catalog-container {
+  flex: 1;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  contain: strict;
+}
+.discover-container .discover-content .catalog-container .meta-items-container {
+  padding: 0 1.5rem;
+  z-index: 1;
+}
+.discover-container .discover-content .catalog-container .selectable-inputs-container {
+  flex: none;
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  padding: 1.5rem 1.5rem 1.5rem 2.5rem;
+  overflow: visible;
+  z-index: 2;
+}
+.discover-container .discover-content .catalog-container .selectable-inputs-container .select-input {
+  flex: 0 1 15rem;
+  background-color: var(--overlay-color);
+}
+.discover-container .discover-content .catalog-container .selectable-inputs-container .select-input:not(:first-child) {
+  margin-left: 1.5rem;
+}
+.discover-container .discover-content .catalog-container .selectable-inputs-container .select-input:nth-child(n+4) {
+  display: none;
+}
+.discover-container .discover-content .catalog-container .selectable-inputs-container .select-input:nth-child(n+4) ~ .filter-container .filter-button {
+  display: flex;
+}
+.discover-container .discover-content .catalog-container .selectable-inputs-container .select-input .multiselect-menu-container {
+  overflow: auto;
+}
+.discover-container .discover-content .catalog-container .selectable-inputs-container .filter-container {
+  display: flex;
+  flex: 1 0 5rem;
+  justify-content: flex-end;
+}
+.discover-container .discover-content .catalog-container .selectable-inputs-container .filter-container .filter-button {
+  flex: none;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  margin-left: 1.5rem;
+  border-radius: var(--border-radius);
+  background-color: var(--overlay-color);
+}
+.discover-container .discover-content .catalog-container .selectable-inputs-container .filter-container .filter-button .filter-icon {
+  flex: none;
+  width: 1.4rem;
+  height: 1.4rem;
+  color: var(--primary-foreground-color);
+}
+.discover-container .discover-content .catalog-container .missing-addon-warning-container {
+  flex: none;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1.5rem 1.5rem 1.5rem;
+}
+.discover-container .discover-content .catalog-container .missing-addon-warning-container .warning-label {
+  flex: none;
+  max-height: 2.4em;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  text-align: center;
+  color: var(--primary-foreground-color);
+}
+.discover-container .discover-content .catalog-container .missing-addon-warning-container .install-button {
+  flex: none;
+  min-width: 10rem;
+  max-width: 15rem;
+  padding: 1rem;
+  background-color: var(--secondary-accent-color);
+}
+.discover-container .discover-content .catalog-container .missing-addon-warning-container .install-button:hover {
+  outline: var(--focus-outline-size) solid var(--secondary-accent-color);
+  background-color: transparent;
+}
+.discover-container .discover-content .catalog-container .missing-addon-warning-container .install-button:focus {
+  outline-color: var(--primary-foreground-color);
+}
+.discover-container .discover-content .catalog-container .missing-addon-warning-container .install-button .label {
+  max-height: 2.4em;
+  font-weight: 500;
+  text-align: center;
+  color: var(--primary-foreground-color);
+}
+.discover-container .discover-content .catalog-container .message-container {
+  flex: 0 1 auto;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1.5rem;
+  overflow-y: auto;
+}
+.discover-container .discover-content .catalog-container .message-container:first-child {
+  padding: 4rem;
+}
+.discover-container .discover-content .catalog-container .message-container .image {
+  flex: none;
+  width: 12rem;
+  height: 12rem;
+  margin-bottom: 1rem;
+  object-fit: contain;
+  object-position: center;
+  opacity: 0.9;
+}
+.discover-container .discover-content .catalog-container .message-container .message-label {
+  flex: none;
+  font-size: 2rem;
+  font-weight: 400;
+  text-align: center;
+  color: var(--primary-foreground-color);
+}
+.discover-container .discover-content .catalog-container .meta-items-container {
+  flex: 1;
+  align-self: stretch;
+  display: grid;
+  grid-auto-rows: max-content;
+  align-items: center;
+  grid-gap: 0.5rem;
+  overflow-y: auto;
+}
+.discover-container .discover-content .catalog-container .meta-items-container .meta-item-placeholder {
+  padding: 1rem;
+}
+.discover-container .discover-content .catalog-container .meta-items-container .meta-item-placeholder .poster-container {
+  padding-bottom: calc(100% * var(--poster-shape-ratio));
+  background-color: var(--color-placeholder-background);
+  border-radius: var(--border-radius);
+}
+.discover-container .discover-content .catalog-container .meta-items-container .meta-item-placeholder .title-bar-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 2.8rem;
+}
+.discover-container .discover-content .catalog-container .meta-items-container .meta-item-placeholder .title-bar-container .title-label {
+  flex: none;
+  width: 60%;
+  height: 1.2rem;
+  border-radius: var(--border-radius);
+  background-color: var(--color-placeholder-background);
+}
+.discover-container .discover-content .meta-preview-container {
+  flex: none;
+  align-self: stretch;
+  width: 29rem;
+  padding: 2rem 2.5rem;
+  border-radius: var(--border-radius) 0 0 var(--border-radius);
+  background-color: var(--modal-background-color);
+}
+.selectable-inputs-modal .selectable-inputs-modal-container {
+  overflow: visible;
+}
+.selectable-inputs-modal .selectable-inputs-modal-container .selectable-inputs-modal-content {
+  overflow: visible !important;
+}
+.selectable-inputs-modal .selectable-inputs-modal-container .selectable-inputs-modal-content .select-input {
+  height: 3rem;
+  display: none;
+}
+.selectable-inputs-modal .selectable-inputs-modal-container .selectable-inputs-modal-content .select-input:nth-child(n+4) {
+  display: flex;
+}
+.selectable-inputs-modal .selectable-inputs-modal-container .selectable-inputs-modal-content .select-input:nth-child(n+4):not(:last-child) {
+  margin-bottom: 1rem;
+}
+.selectable-inputs-modal .selectable-inputs-modal-container .selectable-inputs-modal-content .select-input .multiselect-menu-container {
+  max-height: calc(3rem * 3);
+  overflow: auto;
+}
+@media only screen and (min-width: 2200px) {
+  .discover-container .discover-content .catalog-container .meta-items-container {
+    grid-template-columns: repeat(10, 1fr);
+  }
+}
+@media only screen and (max-width: 2200px) {
+  .discover-container .discover-content .catalog-container .meta-items-container {
+    grid-template-columns: repeat(9, 1fr);
+  }
+}
+@media only screen and (max-width: 1900px) {
+  .discover-container .discover-content .catalog-container .meta-items-container {
+    grid-template-columns: repeat(8, 1fr);
+  }
+}
+@media only screen and (max-width: 1600px) {
+  .discover-container .discover-content .catalog-container .meta-items-container {
+    grid-template-columns: repeat(7, 1fr);
+  }
+}
+@media only screen and (max-width: 1300px) {
+  .discover-container .discover-content .catalog-container .meta-items-container {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .discover-container .discover-content .catalog-container .meta-items-container {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .discover-container .discover-content .meta-preview-container {
+    display: none;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .discover-container .discover-content .catalog-container .meta-items-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .discover-container .discover-content .meta-preview-container {
+    display: none;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .discover-container .discover-content .catalog-container .selectable-inputs-container {
+    justify-content: space-between;
+  }
+  .discover-container .discover-content .catalog-container .selectable-inputs-container .select-input:nth-child(n+2) {
+    display: none;
+  }
+  .discover-container .discover-content .catalog-container .selectable-inputs-container .select-input:nth-child(n+2) ~ .filter-container .filter-button {
+    display: flex;
+  }
+  .discover-container .discover-content .catalog-container .meta-items-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .selectable-inputs-modal .selectable-inputs-modal-container .selectable-inputs-modal-content .select-input {
+    display: none;
+  }
+  .selectable-inputs-modal .selectable-inputs-modal-container .selectable-inputs-modal-content .select-input:nth-child(n+2) {
+    display: flex;
+  }
+  .selectable-inputs-modal .selectable-inputs-modal-container .selectable-inputs-modal-content .select-input:nth-child(n+2):not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}

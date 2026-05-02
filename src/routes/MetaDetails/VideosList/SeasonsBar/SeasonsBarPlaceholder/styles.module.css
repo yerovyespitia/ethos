@@ -1,0 +1,56 @@
+/* Copyright (C) 2017-2023 Smart code 203358507 */
+.seasons-bar-placeholder-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.seasons-bar-placeholder-container .prev-season-button,
+.seasons-bar-placeholder-container .next-season-button {
+  flex: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 6.5rem;
+  height: 3rem;
+  padding: 0.5rem;
+}
+.seasons-bar-placeholder-container .prev-season-button > :first-child,
+.seasons-bar-placeholder-container .next-season-button > :first-child {
+  margin-right: 0.5rem;
+}
+.seasons-bar-placeholder-container .prev-season-button .icon,
+.seasons-bar-placeholder-container .next-season-button .icon {
+  flex: none;
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--color-placeholder-background);
+}
+.seasons-bar-placeholder-container .prev-season-button .label,
+.seasons-bar-placeholder-container .next-season-button .label {
+  flex: 1;
+  max-height: 1.2em;
+  font-weight: 500;
+  text-align: center;
+  color: var(--color-placeholder-text);
+}
+.seasons-bar-placeholder-container .seasons-popup-label-container {
+  flex: 0 1 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 1rem;
+}
+.seasons-bar-placeholder-container .seasons-popup-label-container .seasons-popup-label {
+  max-height: 1.2em;
+  font-weight: 500;
+  color: var(--color-placeholder-text);
+}
+.seasons-bar-placeholder-container .seasons-popup-label-container .seasons-popup-icon {
+  flex: none;
+  width: 1rem;
+  height: 1rem;
+  margin-left: 1rem;
+  color: var(--color-placeholder-background);
+}

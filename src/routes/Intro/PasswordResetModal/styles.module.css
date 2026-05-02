@@ -1,0 +1,41 @@
+/* Copyright (C) 2017-2023 Smart code 203358507 */
+:import('../../../components/ModalDialog/styles.module.css') {
+  password-reset-modal-content: modal-dialog-content;
+  cancel-button-label: label;
+}
+.password-reset-modal-container .password-reset-modal-content {
+  width: 30rem;
+}
+.password-reset-modal-container .password-reset-modal-content .credentials-text-input {
+  width: 100%;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  outline-offset: calc(-1 * var(--focus-outline-size));
+  color: var(--primary-foreground-color);
+  background: var(--overlay-color);
+}
+.password-reset-modal-container .password-reset-modal-content .credentials-text-input:hover,
+.password-reset-modal-container .password-reset-modal-content .credentials-text-input:focus {
+  outline: var(--focus-outline-size) solid var(--overlay-color);
+}
+.password-reset-modal-container .error-message {
+  font-size: 1.1rem;
+  margin-top: 2rem;
+  text-align: center;
+  color: hsla(42, 100%, 54.9%, 0.9);
+}
+.password-reset-modal-container .cancel-button {
+  background-color: transparent;
+}
+.password-reset-modal-container .cancel-button:hover,
+.password-reset-modal-container .cancel-button:focus {
+  outline-color: var(--primary-foreground-color);
+}
+.password-reset-modal-container .cancel-button .cancel-button-label {
+  color: var(--primary-foreground-color);
+}
+@media only screen and (max-width: 640px) {
+  .password-reset-modal-container .password-reset-modal-content {
+    width: auto;
+  }
+}

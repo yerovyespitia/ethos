@@ -1,0 +1,7 @@
+/* Copyright (C) 2017-2023 Smart code 203358507 */
+.text-input {
+  user-select: text;
+}
+.text-input::-moz-focus-inner {
+  border: none;
+}

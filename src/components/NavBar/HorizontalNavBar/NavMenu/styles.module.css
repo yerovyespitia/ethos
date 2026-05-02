@@ -1,0 +1,99 @@
+/* Copyright (C) 2017-2023 Smart code 203358507 */
+:import('../../../Popup/styles.module.css') {
+  popup-menu-container: menu-container;
+}
+.nav-menu-popup-label .popup-menu-container {
+  margin-top: 1rem;
+}
+.nav-menu-container {
+  width: 22rem;
+  max-height: calc(calc(var(--small-viewport-height) - var(--horizontal-nav-bar-size)) - 1rem);
+  overflow-y: auto;
+  border-radius: var(--border-radius);
+  background-color: var(--modal-background-color);
+}
+.nav-menu-container.with-warning {
+  max-height: calc(calc(var(--small-viewport-height) - var(--horizontal-nav-bar-size)) - 6rem);
+}
+.nav-menu-container .user-info-container {
+  display: flex;
+  padding: 1.5rem 1rem;
+}
+.nav-menu-container .user-info-container .avatar-container {
+  flex: none;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-origin: content-box;
+  background-clip: content-box;
+  background-color: var(--primary-foreground-color);
+  opacity: 0.9;
+}
+.nav-menu-container .user-info-container .user-info-details {
+  flex: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 1rem;
+}
+.nav-menu-container .user-info-container .user-info-details .email-container {
+  flex: none;
+  margin-bottom: 0.5rem;
+}
+.nav-menu-container .user-info-container .user-info-details .email-container .email-label {
+  flex: 1;
+  color: var(--primary-foreground-color);
+}
+.nav-menu-container .user-info-container .user-info-details .logout-button-container {
+  flex: none;
+}
+.nav-menu-container .user-info-container .user-info-details .logout-button-container:hover,
+.nav-menu-container .user-info-container .user-info-details .logout-button-container:focus {
+  outline: none;
+}
+.nav-menu-container .user-info-container .user-info-details .logout-button-container:hover .logout-label,
+.nav-menu-container .user-info-container .user-info-details .logout-button-container:focus .logout-label {
+  text-decoration: underline;
+}
+.nav-menu-container .user-info-container .user-info-details .logout-button-container .logout-label {
+  flex: 1;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--primary-foreground-color);
+}
+.nav-menu-container .nav-menu-section {
+  border-top: thin solid var(--overlay-color);
+}
+.nav-menu-container .nav-menu-section .nav-menu-option-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 4rem;
+  padding: 0 1.5rem;
+}
+.nav-menu-container .nav-menu-section .nav-menu-option-container:hover {
+  background-color: var(--overlay-color);
+}
+.nav-menu-container .nav-menu-section .nav-menu-option-container .icon {
+  flex: none;
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+  color: var(--primary-foreground-color);
+  opacity: 0.3;
+}
+.nav-menu-container .nav-menu-section .nav-menu-option-container .nav-menu-option-label {
+  flex: 1;
+  color: var(--primary-foreground-color);
+}
+@media only screen and (max-width: 640px) {
+  .nav-menu-container {
+    max-height: calc(calc(var(--small-viewport-height) - var(--horizontal-nav-bar-size) - var(--vertical-nav-bar-size)) - 1rem);
+  }
+  .nav-menu-container.with-warning {
+    max-height: calc(calc(var(--small-viewport-height) - var(--horizontal-nav-bar-size) - var(--vertical-nav-bar-size)) - 8.5rem);
+  }
+}

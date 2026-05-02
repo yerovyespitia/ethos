@@ -1,0 +1,50 @@
+/* Copyright (C) 2017-2024 Smart code 203358507 */
+.table {
+  flex: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.table .week {
+  flex: none;
+  position: relative;
+  height: 3rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  align-items: center;
+}
+.table .week .day {
+  position: relative;
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--primary-foreground-color);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.table .week .day .long {
+  display: block;
+}
+.table .week .day .short {
+  display: none;
+}
+.table .grid {
+  flex: auto;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1px;
+  grid-auto-rows: 1fr;
+}
+@media only screen and (max-width: 1000px) {
+  .table .week .day .long {
+    display: none;
+  }
+  .table .week .day .short {
+    display: block;
+  }
+}

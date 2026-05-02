@@ -1,0 +1,71 @@
+/* Copyright (C) 2017-2025 Smart code 203358507 */
+.checkbox {
+  display: flex;
+  align-items: center;
+  overflow: visible;
+}
+.checkbox .label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.5rem 0;
+  cursor: pointer;
+}
+.checkbox .label span {
+  font-size: 0.9rem;
+  color: var(--primary-foreground-color);
+  opacity: 0.6;
+}
+.checkbox .label .link {
+  font-size: 0.9rem;
+  color: var(--primary-accent-color);
+  margin-left: 0.5rem;
+}
+.checkbox .label .link:hover {
+  text-decoration: underline;
+}
+.checkbox .checkbox-container {
+  position: relative;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 0.3rem;
+  background-color: var(--overlay-color);
+  padding: 0.1rem;
+  display: flex;
+  flex: none;
+  margin: 0 1rem 0 0.3rem;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+  outline-width: var(--focus-outline-size);
+  outline-color: hsl(0, 0%, 100%);
+  outline-offset: 2px;
+}
+.checkbox .checkbox-container input[type='checkbox'] {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+  cursor: pointer;
+}
+.checkbox .checkbox-container .checkbox-icon {
+  width: 100%;
+  height: 100%;
+  color: var(--primary-foreground-color);
+}
+.checkbox .checkbox-container.disabled {
+  cursor: not-allowed;
+}
+.checkbox .checkbox-container.error {
+  border-color: var(--danger-accent-color);
+}
+.checkbox .checkbox-container.checked {
+  background-color: var(--primary-accent-color);
+}
+.checkbox .checkbox-container:hover,
+.checkbox .checkbox-container:focus {
+  outline-style: solid;
+}

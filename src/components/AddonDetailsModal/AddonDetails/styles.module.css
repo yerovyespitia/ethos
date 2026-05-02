@@ -1,0 +1,63 @@
+/* Copyright (C) 2017-2023 Smart code 203358507 */
+.addon-details-container .title-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.addon-details-container .title-container .logo,
+.addon-details-container .title-container .icon {
+  float: left;
+  width: 5rem;
+  height: 5rem;
+  margin-right: 1.5rem;
+  padding: 0.5rem;
+}
+.addon-details-container .title-container .logo {
+  object-fit: contain;
+  object-position: center;
+}
+.addon-details-container .title-container .icon {
+  color: var(--primary-foreground-color);
+}
+.addon-details-container .title-container .name-container {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+.addon-details-container .title-container .name-container .name {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  margin-right: 0.5rem;
+  font-size: 1.6rem;
+  color: var(--primary-foreground-color);
+}
+.addon-details-container .title-container .name-container .version {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  margin-top: 0.5rem;
+  color: var(--primary-foreground-color);
+}
+.addon-details-container .section-container {
+  margin-top: 1rem;
+}
+.addon-details-container .section-container .section-header {
+  font-size: 1.1rem;
+  color: var(--primary-foreground-color);
+}
+.addon-details-container .section-container .section-label {
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: var(--primary-foreground-color);
+}
+.addon-details-container .section-container .section-label.transport-url-label {
+  user-select: text;
+}
+.addon-details-container .section-container .section-label.disclaimer-label {
+  font-style: italic;
+}

@@ -1,0 +1,14 @@
+/* Copyright (C) 2017-2024 Smart code 203358507 */
+.horizontal-scroll {
+  position: relative;
+  overflow-x: auto;
+}
+.horizontal-scroll.left {
+  mask-image: linear-gradient(90deg, #000000 calc(100% - 10%), rgba(0, 0, 0, 0) 100%);
+}
+.horizontal-scroll.right {
+  mask-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #000000 10%);
+}
+.horizontal-scroll.center {
+  mask-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #000000 10%, #000000 calc(100% - 10%), rgba(0, 0, 0, 0) 100%);
+}

@@ -1,0 +1,26 @@
+/* Copyright (C) 2017-2023 Smart code 203358507 */
+:import('../../../../components/Slider/styles.module.css') {
+  slider-track: track;
+  slider-track-before: track-before;
+  slider-track-after: track-after;
+  slider-thumb: thumb;
+}
+.volume-slider:not(:global(.disabled)) .slider-track {
+  background-color: rgba(255, 255, 255, 0.18);
+  opacity: 1;
+}
+.volume-slider:not(:global(.disabled)) .slider-track-after {
+  background-color: rgba(255, 255, 255, 0.95);
+}
+.volume-slider .slider-track-before {
+  background-color: transparent;
+}
+.volume-slider:not(:global(.disabled)):hover .slider-track-after,
+.volume-slider:not(:global(.disabled)):global(.active) .slider-track-after {
+  background-color: rgba(255, 255, 255, 0.95);
+}
+.volume-slider .slider-thumb {
+  background-color: rgba(255, 255, 255, 0.95);
+  opacity: 0;
+  transition: opacity 140ms ease;
+}

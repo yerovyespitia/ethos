@@ -1,0 +1,42 @@
+/* Copyright (C) 2017-2026 Smart code 203358507 */
+
+.shortcuts-group {
+  flex: 1 1 0;
+  position: relative;
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  overflow: visible;
+}
+.shortcuts-group .title {
+  flex: none;
+  display: flex;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--primary-foreground-color);
+  opacity: 0.6;
+}
+.shortcuts-group .shortcuts {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  overflow: visible;
+}
+.shortcuts-group .shortcuts .shortcut {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  overflow: visible;
+}
+.shortcuts-group .shortcuts .shortcut .label {
+  position: relative;
+  font-size: 1rem;
+  color: var(--primary-foreground-color);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

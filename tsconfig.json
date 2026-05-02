@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "lib": ["ESNext", "DOM", "DOM.Iterable"],
+        "jsx": "react",
+        "types": ["vite/client"],
+        "baseUrl": "./src",
+        "outDir": "./dist",
+        "moduleResolution": "node",
+        "paths": {
+            "ethos/*": ["*"],
+        },
+        "resolveJsonModule": true,
+        "esModuleInterop": true,
+        "allowJs": true,
+        "checkJs": false,
+        "noEmit": false,
+        "strict": true,
+    },
+    "include": [
+        "src/",
+    ]
+}

@@ -1,0 +1,32 @@
+/* Copyright (C) 2017-2023 Smart code 203358507 */
+.option-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 3.5rem;
+  border-radius: var(--border-radius);
+  padding: 0 1rem;
+  margin-bottom: 0.5rem;
+}
+.option-container:last-child {
+  margin-bottom: 0;
+}
+.option-container .icon {
+  flex: none;
+  width: 1.4rem;
+  height: 1.4rem;
+  margin-right: 1rem;
+  color: var(--primary-foreground-color);
+}
+.option-container .label {
+  flex: 1;
+  max-height: 2.4em;
+  font-weight: 400;
+  color: var(--primary-foreground-color);
+}
+.option-container:hover {
+  background-color: var(--overlay-color);
+}
+.option-container:global(.disabled) {
+  opacity: 0.5;
+}

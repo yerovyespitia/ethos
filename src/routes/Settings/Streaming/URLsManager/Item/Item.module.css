@@ -1,0 +1,104 @@
+/* Copyright (C) 2017-2024 Smart code 203358507 */
+.item {
+  display: flex;
+  padding: 0.7rem 1.5rem;
+  border-radius: 2.5rem;
+  transition: 0.3s all ease-in-out;
+  background-color: var(--overlay-color);
+  border: 2px solid transparent;
+  justify-content: space-between;
+  position: relative;
+}
+.item .content {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  max-width: 60%;
+}
+.item .content .selectable {
+  overflow: visible;
+}
+.item .content .label {
+  color: var(--primary-foreground-color);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.item .actions {
+  display: flex;
+  gap: 1rem;
+  padding-right: 4rem;
+}
+.item .actions .status {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+}
+.item .actions .status .icon {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 1rem;
+}
+.item .actions .status .icon.ready {
+  background-color: var(--secondary-accent-color);
+}
+.item .actions .status .icon.error {
+  background-color: var(--danger-accent-color);
+}
+.item .actions .status .label {
+  font-size: 1rem;
+  color: var(--primary-foreground-color);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.item .actions .delete {
+  position: absolute;
+  display: flex;
+  right: 1.5rem;
+  top: 50%;
+  gap: 0.5rem;
+  padding: 0.5rem 0.25rem;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  transition: 0.3s all ease-in-out;
+  border-radius: var(--border-radius);
+  transform: translateY(-50%);
+  width: 3rem;
+}
+.item .actions .delete .icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  opacity: 0;
+  transition: 0.3s all ease-in-out;
+  color: var(--primary-foreground-color);
+}
+.item .actions .delete:hover,
+.item .actions .delete:focus {
+  background-color: var(--overlay-color);
+}
+.item .actions .delete:hover .icon,
+.item .actions .delete:focus .icon {
+  color: var(--danger-accent-color);
+  opacity: 1 !important;
+}
+.item:hover {
+  border: 2px solid var(--overlay-color);
+}
+.item:hover .actions .delete .icon {
+  opacity: 0.6;
+}
+@media only screen and (max-width: 640px) {
+  .item {
+    padding: 0.7rem 1rem;
+  }
+  .item .actions .delete {
+    right: 1rem;
+  }
+  .item .actions .delete .icon {
+    opacity: 0.6;
+  }
+}

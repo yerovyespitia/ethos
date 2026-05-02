@@ -1,0 +1,39 @@
+/* Copyright (C) 2017-2023 Smart code 203358507 */
+.meta-links-container .label-container {
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--primary-foreground-color);
+  opacity: 0.3;
+}
+.meta-links-container .links-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.meta-links-container .links-container .link-container {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  margin-right: 0.75rem;
+  margin-bottom: 0.75rem;
+  padding: 0.4rem 1.25rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  border-radius: 2rem;
+  border: var(--focus-outline-size) solid transparent;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--primary-foreground-color);
+  background-color: var(--overlay-color);
+  backdrop-filter: blur(5px);
+}
+.meta-links-container .links-container .link-container:hover,
+.meta-links-container .links-container .link-container:focus {
+  background-color: hsla(0, 0%, 100%, 0.3);
+}
+.meta-links-container .links-container .link-container:focus {
+  outline: none;
+  border-color: hsl(0, 0%, 100%);
+}

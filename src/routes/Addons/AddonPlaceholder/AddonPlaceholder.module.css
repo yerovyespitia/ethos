@@ -1,0 +1,139 @@
+/* Copyright (C) 2017-2024 Smart code 203358507 */
+.addon-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  background-color: var(--overlay-color);
+  cursor: inherit;
+}
+.addon-container .content {
+  display: flex;
+  flex: 1;
+}
+.addon-container .content .logo-container {
+  flex: none;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  background-color: var(--primary-foreground-color);
+  opacity: 0.1;
+}
+.addon-container .content .info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  flex: 1;
+}
+.addon-container .content .info-container .placeholder-pill:nth-child(1) {
+  background-color: var(--primary-foreground-color);
+  border-radius: var(--border-radius);
+  opacity: 0.1;
+  width: 40%;
+  height: 1.3rem;
+}
+.addon-container .content .info-container .placeholder-pill:nth-child(2) {
+  background-color: var(--primary-foreground-color);
+  border-radius: var(--border-radius);
+  opacity: 0.1;
+  width: 60%;
+  height: 1.3rem;
+}
+.addon-container .content .info-container .placeholder-pill:nth-child(3) {
+  background-color: var(--primary-foreground-color);
+  border-radius: var(--border-radius);
+  opacity: 0.1;
+  width: 80%;
+  height: 1.3rem;
+}
+.addon-container .content .info-container .placeholder-pill:nth-child(4) {
+  display: none;
+}
+.addon-container .buttons-container {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 30%;
+  max-width: 18rem;
+}
+.addon-container .buttons-container .action-buttons-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.addon-container .buttons-container .action-buttons-container .placeholder-pill:nth-child(1),
+.addon-container .buttons-container .action-buttons-container .placeholder-pill:nth-child(2) {
+  background-color: var(--primary-foreground-color);
+  border-radius: var(--border-radius);
+  opacity: 0.1;
+  width: 50%;
+  height: 3.5rem;
+}
+.addon-container .buttons-container .placeholder-pill:last-child {
+  background-color: var(--primary-foreground-color);
+  border-radius: var(--border-radius);
+  opacity: 0.1;
+  width: 100%;
+  height: 3.5rem;
+}
+@media screen and (max-width: 640px) {
+  .addon-container {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 1rem;
+  }
+  .addon-container .content {
+    flex-direction: row;
+    width: 100%;
+  }
+  .addon-container .content .logo-container {
+    margin: 0 auto;
+  }
+  .addon-container .content .info-container {
+    padding: 1rem;
+    width: 100%;
+  }
+  .addon-container .content .info-container .placeholder-pill:nth-child(1) {
+    background-color: var(--primary-foreground-color);
+    border-radius: var(--border-radius);
+    opacity: 0.1;
+    width: 60%;
+    height: 1.3rem;
+  }
+  .addon-container .content .info-container .placeholder-pill:nth-child(2) {
+    background-color: var(--primary-foreground-color);
+    border-radius: var(--border-radius);
+    opacity: 0.1;
+    width: 40%;
+    height: 1.3rem;
+  }
+  .addon-container .content .info-container .placeholder-pill:nth-child(3) {
+    background-color: var(--primary-foreground-color);
+    border-radius: var(--border-radius);
+    opacity: 0.1;
+    width: 80%;
+    height: 0.8rem;
+  }
+  .addon-container .content .info-container .placeholder-pill:nth-child(4) {
+    display: block;
+    background-color: var(--primary-foreground-color);
+    border-radius: var(--border-radius);
+    opacity: 0.1;
+    width: 20%;
+    height: 0.8rem;
+  }
+  .addon-container .buttons-container {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 0.5rem;
+    max-width: none;
+  }
+  .addon-container .buttons-container .action-buttons-container {
+    display: none;
+  }
+}

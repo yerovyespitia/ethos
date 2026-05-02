@@ -1,0 +1,90 @@
+/* Copyright (C) 2017-2024 Smart code 203358507 */
+:import('../../../components/MetaPreview/styles.module.css') {
+  description-container: description-container;
+  action-buttons-container: action-buttons-container;
+}
+.side-drawer {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  padding-top: calc(1rem + var(--safe-area-inset-top));
+  height: 100dvh;
+  max-width: 35rem;
+  overflow-y: auto;
+  position: relative;
+  border-top-left-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
+  background-color: var(--modal-background-color);
+  box-shadow: 0 1.35rem 2.7rem var(--color-background-dark5-40), 0 1.1rem 0.85rem var(--color-background-dark5-20);
+  backdrop-filter: blur(15px);
+  transition: transform 0.3s ease-in-out;
+  z-index: 1;
+}
+.side-drawer .close-button {
+  display: none;
+  position: absolute;
+  top: calc(1.3rem + var(--safe-area-inset-top));
+  right: 1.3rem;
+  padding: 0.5rem;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 2;
+  border-radius: var(--border-radius);
+  transition: 0.3s all ease-in-out;
+  -webkit-tap-highlight-color: transparent;
+}
+.side-drawer .close-button .icon {
+  color: var(--primary-foreground-color);
+  width: 2rem;
+  height: 2rem;
+  opacity: 0.6;
+  transition: 0.3s opacity ease-in-out;
+}
+.side-drawer .close-button:hover {
+  background-color: var(--overlay-color);
+}
+.side-drawer .close-button:hover .icon {
+  opacity: 1;
+}
+.side-drawer .info {
+  padding: 1rem;
+  overflow-y: auto;
+}
+.side-drawer .info .side-drawer-meta-preview .description-container {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+.side-drawer .info .side-drawer-meta-preview .action-buttons-container {
+  padding-top: 0;
+  margin-top: 0;
+}
+.side-drawer .series-content {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+.side-drawer .series-content .videos {
+  overflow-y: auto;
+}
+@media screen and (max-width: 500px) and (max-height: 1000px) and (orientation: portrait) {
+  .side-drawer {
+    max-width: 100dvw;
+  }
+  .side-drawer .close-button {
+    display: block;
+  }
+}
+@media screen and (max-width: 1000px) and (max-height: 500px) and (orientation: landscape) {
+  .side-drawer {
+    max-width: 50dvw;
+  }
+}
+@media screen and (max-width: 800px) {
+  .side-drawer {
+    padding: calc(1rem / 2);
+  }
+  .side-drawer .info {
+    padding: calc(1rem / 2);
+  }
+}

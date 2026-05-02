@@ -1,0 +1,14 @@
+/* Copyright (C) 2017-2026 Smart code 203358507 */
+
+.link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 2rem;
+}
+.link .label {
+  color: var(--primary-accent-color);
+}
+.link:hover .label {
+  text-decoration: underline;
+}

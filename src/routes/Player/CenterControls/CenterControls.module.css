@@ -1,0 +1,63 @@
+/* Copyright (C) 2017-2023 Smart code 203358507 */
+
+.center-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  pointer-events: none;
+}
+
+.side-btn {
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 100%;
+  background-color: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: var(--primary-foreground-color);
+  transition: background-color 0.15s ease-in-out, transform 0.15s ease-in-out;
+}
+
+.side-btn:hover,
+.side-btn:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.28);
+  transform: scale(1.08);
+}
+
+.side-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.play-btn {
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: 100%;
+  background-color: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: var(--primary-foreground-color);
+  transition: background-color 0.15s ease-in-out, transform 0.15s ease-in-out;
+}
+
+.play-btn:hover,
+.play-btn:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.28);
+  transform: scale(1.08);
+}
+
+.play-icon {
+  width: 2.75rem;
+  height: 2.75rem;
+}

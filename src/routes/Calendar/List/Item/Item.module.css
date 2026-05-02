@@ -1,0 +1,117 @@
+/* Copyright (C) 2017-2024 Smart code 203358507 */
+.item {
+  flex: none;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--overlay-color);
+  border-radius: var(--border-radius);
+  border: 0.15rem solid transparent;
+  transition: border-color 0.1s ease-out;
+}
+.item .heading {
+  flex: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 3.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--primary-foreground-color);
+  padding: 0 1rem;
+}
+.item .body {
+  flex: auto;
+  display: flex;
+  flex-direction: column;
+}
+.item .body .video {
+  flex: none;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  height: 3rem;
+  padding: 0 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--primary-foreground-color);
+}
+.item .body .video:last-child {
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+.item .body .video .name {
+  flex: auto;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.item .body .video .info {
+  flex: none;
+  display: block;
+}
+.item .body .video .icon {
+  flex: none;
+  display: none;
+  width: 2rem;
+  height: 2rem;
+  padding: 0.5rem;
+  border-radius: 50%;
+  color: var(--primary-foreground-color);
+  background-color: var(--secondary-accent-color);
+}
+.item .body .video:hover {
+  background-color: var(--overlay-color);
+}
+.item .body .video:hover .info {
+  display: none;
+}
+.item .body .video:hover .icon {
+  display: block;
+}
+.item.placeholder {
+  opacity: 0.7;
+  pointer-events: none;
+}
+.item.placeholder .text {
+  width: 8rem;
+  height: 1.2rem;
+  background-color: var(--overlay-color);
+  border-radius: 0.2rem;
+}
+.item.placeholder .video {
+  flex: none;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  height: 3rem;
+  padding: 0 1rem;
+}
+.item.placeholder .video .name {
+  flex: auto;
+  width: 12rem;
+  height: 1.2rem;
+  background-color: var(--overlay-color);
+  border-radius: 0.2rem;
+}
+.item.placeholder .video .info {
+  flex: none;
+  width: 4rem;
+  height: 1.2rem;
+  background-color: var(--overlay-color);
+  border-radius: 0.2rem;
+}
+.item.today .heading {
+  background-color: var(--primary-accent-color);
+}
+.item.active {
+  border-color: var(--primary-foreground-color);
+}
+.item:not(.active):hover {
+  border-color: var(--overlay-color);
+}

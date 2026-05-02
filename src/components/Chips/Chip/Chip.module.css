@@ -1,0 +1,30 @@
+/* Copyright (C) 2017-2024 Smart code 203358507 */
+.chip {
+  flex: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.75rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--primary-foreground-color);
+  white-space: nowrap;
+  text-transform: capitalize;
+  padding: 0 1.75rem;
+  border-radius: 2.75rem;
+  background-color: transparent;
+  user-select: none;
+  overflow: hidden;
+  opacity: 0.6;
+}
+.chip:hover {
+  background-color: var(--overlay-color);
+  transition: background-color 0.1s ease-out;
+  opacity: 1;
+}
+.chip.active {
+  opacity: 1;
+  background-color: var(--quaternary-accent-color);
+  transition: background-color 0.1s ease-in;
+}

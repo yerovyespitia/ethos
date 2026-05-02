@@ -1,0 +1,26 @@
+/* Copyright (C) 2017-2026 Smart code 203358507 */
+
+:import('../components/Option/Option.module.css') {
+  option-content: content;
+}
+.info {
+  display: none;
+}
+.info .option-content {
+  color: var(--primary-foreground-color);
+  overflow: hidden;
+}
+.info .option-content .label {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+@media only screen and (max-width: 1000px) {
+  .info {
+    display: flex;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .info {
+    display: flex;
+  }
+}

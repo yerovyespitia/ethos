@@ -1,0 +1,227 @@
+/* Copyright (C) 2017-2023 Smart code 203358507 */
+:import('../../../../components/Popup/styles.module.css') {
+  context-menu-container: menu-container;
+  menu-direction-top-left: menu-direction-top-left;
+  menu-direction-bottom-left: menu-direction-bottom-left;
+  menu-direction-top-right: menu-direction-top-right;
+  menu-direction-bottom-right: menu-direction-bottom-right;
+}
+.stream-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: var(--border-radius);
+}
+.stream-container.details-variant {
+  gap: 1rem;
+  padding: 0.85rem;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.04);
+}
+.stream-container:hover,
+.stream-container:focus {
+  background-color: var(--overlay-color);
+}
+.stream-container:hover .icon,
+.stream-container:focus .icon,
+.stream-container:global(.selected) .icon {
+  opacity: 1;
+}
+.stream-container .info-container {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.stream-container.details-variant .info-container {
+  gap: 0.75rem;
+}
+.stream-container .info-container .thumbnail {
+  display: block;
+  height: 5rem;
+  width: 8rem;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.9;
+}
+.stream-container.details-variant .info-container .thumbnail,
+.stream-container.details-variant .info-container .placeholder-icon {
+  width: clamp(10rem, 22vw, 14rem);
+  height: clamp(5.8rem, 12vw, 7.8rem);
+  border-radius: 0.9rem;
+}
+.stream-container .info-container .placeholder-icon {
+  display: block;
+  height: 5rem;
+  width: 8rem;
+  padding: 1rem;
+  color: var(--primary-foreground-color);
+  background-color: var(--overlay-color);
+  opacity: 0.25;
+}
+.stream-container .info-container .addon-name {
+  width: 7rem;
+  font-size: 1.1rem;
+  text-align: left;
+  white-space: pre-wrap;
+  color: var(--primary-foreground-color);
+}
+.stream-container .info-container .progress-bar-container {
+  flex: 0 0 100%;
+  position: relative;
+  border-radius: var(--border-radius);
+}
+.stream-container .info-container .progress-bar-container .progress-bar {
+  z-index: 1;
+  position: relative;
+  height: 0.4rem;
+  background-color: var(--primary-accent-color);
+}
+.stream-container .info-container .progress-bar-container .progress-bar-background {
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--primary-foreground-color);
+  opacity: 0.2;
+}
+.stream-container .description-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  white-space: pre;
+  overflow-y: visible;
+  text-overflow: ellipsis;
+  color: var(--primary-foreground-color);
+}
+.stream-container.details-variant .description-container {
+  min-width: 0;
+  gap: 0.5rem;
+  white-space: normal;
+}
+.stream-container.details-variant .description-container .stream-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--primary-foreground-color);
+}
+.stream-container.details-variant .description-container .stream-addon-badge {
+  width: fit-content;
+  max-width: 100%;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  background-color: rgba(255, 255, 255, 0.08);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.78);
+}
+.stream-container.details-variant .description-container .stream-description {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.72);
+}
+.stream-container .icon {
+  flex: none;
+  width: 3rem;
+  height: 3rem;
+  padding: 0.7rem;
+  border-radius: 50%;
+  opacity: 0;
+  color: var(--primary-foreground-color);
+  background-color: var(--secondary-accent-color);
+}
+.stream-container.details-variant .icon {
+  align-self: center;
+  opacity: 1;
+}
+.stream-container .menu-icon {
+  flex: none;
+  width: 1.7rem;
+  height: 1.7rem;
+  margin-right: 1rem;
+  color: var(--color-placeholder);
+}
+.stream-container .context-menu-container {
+  max-width: calc(90% - 1.5rem);
+  z-index: 2;
+}
+.stream-container .context-menu-container .context-menu-content {
+  --spatial-navigation-contain: contain;
+}
+.stream-container .context-menu-container .context-menu-content .context-menu-title {
+  font-size: 0.9rem;
+  padding: 1rem 1.5rem;
+  font-weight: 100;
+  border-bottom: 1px solid var(--color-placeholder);
+  color: var(--primary-foreground-color);
+  white-space: break-spaces;
+}
+.stream-container .context-menu-container .context-menu-content .context-menu-option-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1rem 1.5rem;
+}
+.stream-container .context-menu-container .context-menu-content .context-menu-option-container:hover,
+.stream-container .context-menu-container .context-menu-content .context-menu-option-container:focus {
+  background-color: var(--overlay-color);
+}
+.stream-container .context-menu-container .context-menu-content .context-menu-option-container .context-menu-option-label {
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--primary-foreground-color);
+  text-transform: capitalize;
+}
+@media only screen and (max-width: 1300px) {
+  .stream-container .description-container {
+    font-size: 0.9rem;
+  }
+  .stream-container .info-container .addon-name {
+    font-size: 0.9rem;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .stream-container.details-variant {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .stream-container.details-variant .info-container .thumbnail,
+  .stream-container.details-variant .info-container .placeholder-icon {
+    width: 100%;
+    max-width: none;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+  .stream-container .info-container .addon-name {
+    font-weight: 500;
+  }
+  .stream-container .context-menu-container.menu-direction-top-left,
+  .stream-container .context-menu-container.menu-direction-bottom-left {
+    right: 1.5rem;
+  }
+  .stream-container .context-menu-container.menu-direction-top-right,
+  .stream-container .context-menu-container.menu-direction-bottom-right {
+    left: 1.5rem;
+  }
+  .stream-container .context-menu-container.menu-direction-top-left,
+  .stream-container .context-menu-container.menu-direction-top-right {
+    bottom: 90%;
+  }
+  .stream-container .context-menu-container.menu-direction-bottom-left,
+  .stream-container .context-menu-container.menu-direction-bottom-right {
+    top: 90%;
+  }
+}

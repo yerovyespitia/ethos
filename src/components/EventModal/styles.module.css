@@ -1,0 +1,108 @@
+/* Copyright (C) 2017-2023 Smart code 203358507 */
+:import('../ModalDialog/styles.module.css') {
+  modal-dialog-content: modal-dialog-content;
+  modal-dialog-container: modal-dialog-container;
+}
+.event-modal {
+  backdrop-filter: blur(10px);
+}
+.event-modal .modal-dialog-container {
+  overflow: visible;
+  max-width: 45rem;
+}
+.event-modal .modal-dialog-container .modal-dialog-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: visible;
+  position: relative;
+}
+.event-modal .modal-dialog-container .modal-dialog-content .body-container {
+  overflow-y: visible;
+}
+.event-modal .modal-dialog-container .modal-dialog-content .image {
+  position: absolute;
+  top: -10rem;
+  left: 50%;
+  transform: translateX(-50%);
+  object-fit: cover;
+  width: 30rem;
+  height: 30rem;
+}
+.event-modal .modal-dialog-container .modal-dialog-content .info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  padding: 10rem 4rem 0;
+}
+.event-modal .modal-dialog-container .modal-dialog-content .info-container .title-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.event-modal .modal-dialog-container .modal-dialog-content .info-container .title-container .title {
+  color: var(--primary-foreground-color);
+  font-size: 1.325rem;
+  text-align: center;
+  padding: 0 6rem;
+}
+.event-modal .modal-dialog-container .modal-dialog-content .info-container .title-container .label {
+  color: var(--primary-foreground-color);
+  font-size: 1rem;
+  text-align: center;
+  opacity: 0.5;
+}
+.event-modal .modal-dialog-container .modal-dialog-content .info-container .addon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.event-modal .modal-dialog-container .modal-dialog-content .info-container .addon-container .icon {
+  height: 2rem;
+  width: 2rem;
+  color: var(--primary-accent-color);
+}
+.event-modal .modal-dialog-container .modal-dialog-content .info-container .addon-container .name {
+  color: var(--primary-foreground-color);
+}
+.event-modal .modal-dialog-container .modal-dialog-content .info-container .action-button {
+  background-color: var(--primary-foreground-color);
+  border: 2px solid var(--primary-foreground-color);
+  padding: 0.8rem 2rem;
+  border-radius: 2rem;
+}
+.event-modal .modal-dialog-container .modal-dialog-content .info-container .action-button .button-label {
+  color: var(--primary-accent-color);
+  font-size: 1rem;
+  font-weight: 700;
+}
+.event-modal .modal-dialog-container .modal-dialog-content .info-container .action-button:hover {
+  background-color: transparent;
+}
+@media (orientation: landscape) and (max-height: 640px) {
+  .event-modal .modal-dialog-container .modal-dialog-content {
+    overflow-y: auto;
+  }
+  .event-modal .modal-dialog-container .modal-dialog-content .body-container {
+    overflow-y: auto;
+  }
+  .event-modal .modal-dialog-container .modal-dialog-content .image {
+    display: none;
+  }
+  .event-modal .modal-dialog-container .modal-dialog-content .info-container {
+    padding: 1rem 4rem 0;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .event-modal .modal-dialog-container .modal-dialog-content .info-container .title-container .title {
+    padding: 0rem;
+    font-size: 1rem;
+  }
+  .event-modal .modal-dialog-container .modal-dialog-content .info-container .title-container .label {
+    font-size: 0.875rem;
+  }
+}

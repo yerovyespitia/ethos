@@ -1,0 +1,22 @@
+/* Copyright (C) 2017-2026 Smart code 203358507 */
+
+.combos {
+  position: relative;
+  display: flex;
+  overflow: visible;
+}
+.combos .combo {
+  position: relative;
+  display: flex;
+  overflow: visible;
+}
+.combos .combo .separator {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  font-size: 1rem;
+  color: var(--primary-foreground-color);
+  opacity: 0.6;
+}

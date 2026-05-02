@@ -1,0 +1,31 @@
+/* Copyright (C) 2017-2023 Smart code 203358507 */
+.addon-details-modal-container .addon-details-container,
+.addon-details-modal-container .addon-details-message-container {
+  width: 40rem;
+  max-width: 100%;
+  color: var(--primary-foreground-color);
+}
+.addon-details-modal-container .cancel-button {
+  background-color: transparent;
+  opacity: 0.3;
+}
+.addon-details-modal-container .cancel-button:hover {
+  outline: var(--focus-outline-size) solid var(--primary-foreground-color);
+  opacity: 1;
+}
+.addon-details-modal-container .cancel-button:focus {
+  outline-color: var(--primary-foreground-color);
+}
+.addon-details-modal-container .cancel-button .cancel-button-label {
+  color: var(--primary-foreground-color);
+}
+.addon-details-modal-container .uninstall-button {
+  background-color: var(--overlay-color);
+}
+.addon-details-modal-container .uninstall-button:hover {
+  outline: var(--focus-outline-size) solid var(--overlay-color);
+  background-color: transparent;
+}
+.addon-details-modal-container .uninstall-button:focus {
+  outline-color: var(--primary-foreground-color);
+}

@@ -1,0 +1,70 @@
+/* Copyright (C) 2017-2023 Smart code 203358507 */
+.toast-item-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 25rem;
+  margin-bottom: 1rem;
+  overflow: visible;
+  box-shadow: var(--outer-glow);
+  background-color: var(--modal-background-color);
+  pointer-events: auto;
+  border-radius: var(--border-radius);
+  border: 0.4px solid var(--primary-accent-color);
+  backdrop-filter: blur(10px);
+  padding: 1rem;
+}
+.toast-item-container.success .icon-container .icon {
+  color: hsl(147.7, 68%, 41.7%);
+}
+.toast-item-container.error .icon-container .icon {
+  color: var(--danger-accent-color);
+}
+.toast-item-container.info .icon-container {
+  background-color: hsl(275.1, 33%, 48%);
+}
+.toast-item-container.info .icon-container .icon {
+  color: hsla(0, 0%, 100%, 0.9);
+}
+.toast-item-container .icon-container {
+  border-radius: 3px;
+  background-color: var(--overlay-color);
+}
+.toast-item-container .icon-container .icon {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 2rem;
+}
+.toast-item-container .info-container {
+  flex: 1;
+  align-self: stretch;
+  padding: 0.2rem 1rem;
+}
+.toast-item-container .info-container .title-container {
+  font-size: 1.2rem;
+  color: var(--primary-foreground-color);
+}
+.toast-item-container .info-container .title-container:not(:last-child) {
+  margin-bottom: 0.2rem;
+}
+.toast-item-container .info-container .message-container {
+  font-size: 1.1rem;
+  color: var(--primary-foreground-color);
+  opacity: 0.8;
+}
+.toast-item-container .close-button-container {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 3px;
+}
+.toast-item-container .close-button-container .icon {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: var(--primary-foreground-color);
+  opacity: 0.4;
+}
+.toast-item-container .close-button-container:hover .icon {
+  opacity: 1;
+}

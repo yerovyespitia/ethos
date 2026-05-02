@@ -1,0 +1,29 @@
+/* Copyright (C) 2017-2023 Smart code 203358507 */
+.toggle-container {
+  position: relative;
+}
+.toggle-container .toggle {
+  position: relative;
+  width: 3.2rem;
+  height: 1.7rem;
+  border-radius: 1.7rem;
+  background-color: var(--overlay-color);
+  transition: background-color 0.1s ease-in-out;
+}
+.toggle-container .toggle::before {
+  content: "";
+  position: absolute;
+  height: calc(1.7rem - 0.5rem);
+  width: calc(1.7rem - 0.5rem);
+  top: calc(0.5rem / 2);
+  left: calc(0.5rem / 2);
+  border-radius: 50%;
+  background-color: var(--primary-foreground-color);
+  transition: transform 0.1s ease-in-out;
+}
+.toggle-container:global(.checked) .toggle {
+  background-color: var(--secondary-accent-color);
+}
+.toggle-container:global(.checked) .toggle::before {
+  transform: translateX(calc(3.2rem - calc(1.7rem - 0.5rem) - 0.5rem));
+}

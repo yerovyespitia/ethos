@@ -1,0 +1,53 @@
+/* Copyright (C) 2017-2024 Smart code 203358507 */
+.details {
+  position: relative;
+}
+.details .video {
+  flex: none;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0 1.5rem;
+  height: 4rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--primary-foreground-color);
+}
+.details .video .name {
+  flex: auto;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.details .video .info {
+  flex: none;
+  display: block;
+}
+.details .video .icon {
+  flex: none;
+  width: 2rem;
+  height: 2rem;
+  padding: 0.5rem;
+  border-radius: 50%;
+  color: var(--primary-foreground-color);
+}
+.details .video:hover,
+.details .video:active {
+  background-color: var(--overlay-color);
+}
+.details .video:hover .icon,
+.details .video:active .icon {
+  display: block;
+  background-color: var(--secondary-accent-color);
+}
+.details .placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10rem;
+  font-size: 1rem;
+  color: var(--primary-foreground-color);
+}
