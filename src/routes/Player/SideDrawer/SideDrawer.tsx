@@ -4,7 +4,7 @@ import React, { useMemo, useCallback, useState, forwardRef, memo } from 'react';
 import classNames from 'classnames';
 import Icon from '@stremio/stremio-icons/react';
 import { useServices } from 'ethos/services';
-import { CONSTANTS } from 'ethos/common';
+import { CONSTANTS, getNewEpisodeVideoId } from 'ethos/common';
 import { MetaPreview, Video } from 'ethos/components';
 import SeasonsBar from 'ethos/routes/MetaDetails/VideosList/SeasonsBar';
 import styles from './SideDrawer.module.css';
@@ -38,6 +38,9 @@ const SideDrawer = memo(forwardRef<HTMLDivElement, Props>(({ seriesInfo, classNa
             :
             metaItem.videos;
     }, [metaItem, season]);
+    const newEpisodeVideoId = useMemo(() => {
+        return getNewEpisodeVideoId(videos);
+    }, [videos]);
     const seasons = useMemo(() => {
         return props.metaItem.videos
             .map(({ season }) => season)
@@ -122,6 +125,7 @@ const SideDrawer = memo(forwardRef<HTMLDivElement, Props>(({ seriesInfo, classNa
                                     released={video.released}
                                     upcoming={video.upcoming}
                                     watched={video.watched}
+                                    isNew={video.id === newEpisodeVideoId}
                                     seasonWatched={seasonWatched}
                                     progress={video.progress}
                                     deepLinks={video.deepLinks}

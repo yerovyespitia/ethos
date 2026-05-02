@@ -15,6 +15,7 @@ export const {
     CONSTANTS,
     withCoreSuspender,
     useCoreSuspender,
+    getNewEpisodeVideoId,
     getVisibleChildrenRange,
     interfaceLanguages,
     languageNames,

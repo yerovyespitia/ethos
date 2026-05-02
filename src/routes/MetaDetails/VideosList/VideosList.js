@@ -5,7 +5,7 @@ const PropTypes = require('prop-types');
 const classnames = require('classnames');
 const { t } = require('i18next');
 const { useServices } = require('ethos/services');
-const { useProfile } = require('ethos/common');
+const { getNewEpisodeVideoId, useProfile } = require('ethos/common');
 const { Image, SearchBar, Toggle, Video } = require('ethos/components');
 const SeasonsBar = require('./SeasonsBar');
 const EpisodePicker = require('../EpisodePicker');
@@ -101,6 +101,9 @@ const VideosList = ({ className, metaItem, libraryItem, season, seasonOnSelect, 
                 return a.episode - b.episode;
             });
     }, [videos, selectedSeason]);
+    const newEpisodeVideoId = React.useMemo(() => {
+        return getNewEpisodeVideoId(videosForSeason);
+    }, [videosForSeason]);
 
     const seasonWatched = React.useMemo(() => {
         return videosForSeason.every((video) => video.watched);
@@ -213,6 +216,7 @@ const VideosList = ({ className, metaItem, libraryItem, season, seasonOnSelect, 
                                                 released={video.released}
                                                 upcoming={video.upcoming}
                                                 watched={video.watched}
+                                                isNew={video.id === newEpisodeVideoId}
                                                 progress={video.progress}
                                                 deepLinks={video.deepLinks}
                                                 scheduled={video.scheduled}

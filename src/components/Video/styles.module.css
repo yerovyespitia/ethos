@@ -166,7 +166,8 @@
   margin-left: 0.5rem;
 }
 .video-container .info-container .flex-row-container .upcoming-watched-container .upcoming-container,
-.video-container .info-container .flex-row-container .upcoming-watched-container .watched-container {
+.video-container .info-container .flex-row-container .upcoming-watched-container .watched-container,
+.video-container .info-container .flex-row-container .upcoming-watched-container .new-container {
   flex: none;
   display: flex;
   align-items: center;
@@ -175,18 +176,21 @@
   max-width: 10rem;
 }
 .video-container .info-container .flex-row-container .upcoming-watched-container .upcoming-container:not(:only-child),
-.video-container .info-container .flex-row-container .upcoming-watched-container .watched-container:not(:only-child) {
+.video-container .info-container .flex-row-container .upcoming-watched-container .watched-container:not(:only-child),
+.video-container .info-container .flex-row-container .upcoming-watched-container .new-container:not(:only-child) {
   max-width: 5rem;
 }
 .video-container .info-container .flex-row-container .upcoming-watched-container .upcoming-container .flag-icon,
-.video-container .info-container .flex-row-container .upcoming-watched-container .watched-container .flag-icon {
+.video-container .info-container .flex-row-container .upcoming-watched-container .watched-container .flag-icon,
+.video-container .info-container .flex-row-container .upcoming-watched-container .new-container .flag-icon {
   height: 1.15rem;
   width: 1.15rem;
   margin-right: 0.25rem;
   color: var(--secondary-foreground-color);
 }
 .video-container .info-container .flex-row-container .upcoming-watched-container .upcoming-container .flag-label,
-.video-container .info-container .flex-row-container .upcoming-watched-container .watched-container .flag-label {
+.video-container .info-container .flex-row-container .upcoming-watched-container .watched-container .flag-label,
+.video-container .info-container .flex-row-container .upcoming-watched-container .new-container .flag-label {
   font-size: 0.8rem;
   font-weight: 800;
   white-space: nowrap;
@@ -195,13 +199,24 @@
   color: var(--secondary-foreground-color);
 }
 .video-container .info-container .flex-row-container .upcoming-watched-container .upcoming-container {
-  background-color: var(--secondary-accent-color);
+  background-color: #ffffff;
+}
+.video-container .info-container .flex-row-container .upcoming-watched-container .upcoming-container .flag-label {
+  color: #000000;
 }
 .video-container .info-container .flex-row-container .upcoming-watched-container .watched-container {
   background-color: var(--tertiary-accent-color);
 }
+.video-container .info-container .flex-row-container .upcoming-watched-container .new-container {
+  background-color: #7c3aed;
+}
+.video-container .info-container .flex-row-container .upcoming-watched-container .new-container .flag-icon,
+.video-container .info-container .flex-row-container .upcoming-watched-container .new-container .flag-label {
+  color: #ffffff;
+}
 .video-container.details-variant .thumbnail-container .thumbnail-flags .upcoming-container,
-.video-container.details-variant .thumbnail-container .thumbnail-flags .watched-container {
+.video-container.details-variant .thumbnail-container .thumbnail-flags .watched-container,
+.video-container.details-variant .thumbnail-container .thumbnail-flags .new-container {
   flex: none;
   display: inline-flex;
   align-items: center;
@@ -210,12 +225,25 @@
   backdrop-filter: blur(12px);
   box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.22);
 }
+.video-container.details-variant .thumbnail-container .thumbnail-flags .upcoming-container {
+  background-color: #ffffff;
+}
 .video-container.details-variant .thumbnail-container .thumbnail-flags .watched-container {
   background-color: #f0c419;
+}
+.video-container.details-variant .thumbnail-container .thumbnail-flags .new-container {
+  background-color: #7c3aed;
 }
 .video-container.details-variant .thumbnail-container .thumbnail-flags .watched-container .flag-icon,
 .video-container.details-variant .thumbnail-container .thumbnail-flags .watched-container .flag-label {
   color: #ffffff;
+}
+.video-container.details-variant .thumbnail-container .thumbnail-flags .new-container .flag-icon,
+.video-container.details-variant .thumbnail-container .thumbnail-flags .new-container .flag-label {
+  color: #ffffff;
+}
+.video-container.details-variant .thumbnail-container .thumbnail-flags .upcoming-container .flag-label {
+  color: #000000;
 }
 .video-container.details-variant .thumbnail-container .thumbnail-flags .flag-icon {
   width: 0.95rem;

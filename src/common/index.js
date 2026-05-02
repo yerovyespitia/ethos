@@ -7,6 +7,7 @@ const { TooltipProvider, Tooltip } = require('./Tooltips');
 const { ShortcutsProvider, useShortcuts, onShortcut } = require('./Shortcuts');
 const CONSTANTS = require('./CONSTANTS');
 const { withCoreSuspender, useCoreSuspender } = require('./CoreSuspender');
+const getNewEpisodeVideoId = require('./getNewEpisodeVideoId');
 const getVisibleChildrenRange = require('./getVisibleChildrenRange');
 const interfaceLanguages = require('./interfaceLanguages.json');
 const languageNames = require('./languageNames.json');
@@ -46,6 +47,7 @@ module.exports = {
     CONSTANTS,
     withCoreSuspender,
     useCoreSuspender,
+    getNewEpisodeVideoId,
     getVisibleChildrenRange,
     interfaceLanguages,
     languageNames,

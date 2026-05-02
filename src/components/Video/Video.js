@@ -12,7 +12,7 @@ const useProfile = require('ethos/common/useProfile');
 const VideoPlaceholder = require('./VideoPlaceholder');
 const styles = require('./styles.module.css');
 
-const Video = ({ className, id, title, thumbnail, season, episode, released, upcoming, watched, progress, scheduled, seasonWatched, selected, deepLinks, variant, onMarkVideoAsWatched, onMarkSeasonAsWatched, ...props }) => {
+const Video = ({ className, id, title, thumbnail, season, episode, released, upcoming, watched, isNew, progress, scheduled, seasonWatched, selected, deepLinks, variant, onMarkVideoAsWatched, onMarkSeasonAsWatched, ...props }) => {
     const routeFocused = useRouteFocused();
     const profile = useProfile();
     const { t } = useTranslation();
@@ -121,6 +121,15 @@ const Video = ({ className, id, title, thumbnail, season, episode, released, upc
                                                 null
                                         }
                                         {
+                                            !upcoming && !watched && isNew ?
+                                                <div className={styles['new-container']}>
+                                                    <Icon className={styles['flag-icon']} name={'add'} />
+                                                    <div className={styles['flag-label']}>NEW</div>
+                                                </div>
+                                                :
+                                                null
+                                        }
+                                        {
                                             watched ?
                                                 <div className={styles['watched-container']}>
                                                     <Icon className={styles['flag-icon']} name={'eye'} />
@@ -163,6 +172,15 @@ const Video = ({ className, id, title, thumbnail, season, episode, released, upc
                                         upcoming && !watched ?
                                             <div className={styles['upcoming-container']}>
                                                 <div className={styles['flag-label']}>{t('UPCOMING')}</div>
+                                            </div>
+                                            :
+                                            null
+                                    }
+                                    {
+                                        !upcoming && !watched && isNew ?
+                                            <div className={styles['new-container']}>
+                                                <Icon className={styles['flag-icon']} name={'add'} />
+                                                <div className={styles['flag-label']}>NEW</div>
                                             </div>
                                             :
                                             null
@@ -216,6 +234,7 @@ const Video = ({ className, id, title, thumbnail, season, episode, released, upc
             released={released}
             upcoming={upcoming}
             watched={watched}
+            isNew={isNew}
             progress={progress}
             scheduled={scheduled}
             onClick={videoButtonOnClick}
@@ -243,6 +262,7 @@ Video.propTypes = {
     released: PropTypes.instanceOf(Date),
     upcoming: PropTypes.bool,
     watched: PropTypes.bool,
+    isNew: PropTypes.bool,
     progress: PropTypes.number,
     scheduled: PropTypes.bool,
     seasonWatched: PropTypes.bool,

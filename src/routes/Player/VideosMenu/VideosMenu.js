@@ -3,6 +3,7 @@
 const React = require('react');
 const PropTypes = require('prop-types');
 const classnames = require('classnames');
+const { getNewEpisodeVideoId } = require('ethos/common');
 const { useServices } = require('ethos/services');
 const { Video } = require('ethos/components');
 const styles = require('./styles.module.css');
@@ -20,6 +21,9 @@ const VideosMenu = ({ className, metaItem, seriesInfo }) => {
             :
             metaItem.videos;
     }, [metaItem, seriesInfo]);
+    const newEpisodeVideoId = React.useMemo(() => {
+        return getNewEpisodeVideoId(videos);
+    }, [videos]);
 
     const onMarkVideoAsWatched = (video, watched) => {
         core.transport.dispatch({
@@ -44,6 +48,7 @@ const VideosMenu = ({ className, metaItem, seriesInfo }) => {
                         released={video.released}
                         upcoming={video.upcoming}
                         watched={video.watched}
+                        isNew={video.id === newEpisodeVideoId}
                         progress={video.progress}
                         deepLinks={video.deepLinks}
                         scheduled={video.scheduled}
