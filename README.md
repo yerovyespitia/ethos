@@ -1,6 +1,6 @@
 # Ethos
 
-Ethos is a fork of Stremio focused on improving the overall user experience while keeping the familiar media-center workflow for discovering, organizing, and watching video content through addons.
+Ethos is a fork of Stremio focused on improving the overall user experience while keeping the familiar media-center workflow for discovering, organizing, and watching video content through addons. It also modernizes parts of the stack with faster, newer tooling such as Bun and Vite.
 
 ## Requirements
 
@@ -91,15 +91,15 @@ bun run scan-translations
 
 ### Board
 
-![Board](/assets/screenshots/board.png)
+![Board](./assets/screenshots/board.png)
 
 ### Discover
 
-![Discover](/assets/screenshots/discover.png)
+![Discover](./assets/screenshots/discover.png)
 
 ### Meta Details
 
-![Meta Details](/assets/screenshots/metadetails.png)
+![Meta Details](./assets/screenshots/metadetails.png)
 
 ## License
 
