@@ -61,11 +61,21 @@ Create an unpacked desktop build:
 bun run build:desktop
 ```
 
-Create installable desktop artifacts:
+Create installable desktop artifacts for the current OS:
 
 ```bash
 bun run dist:desktop
 ```
+
+Create installable desktop artifacts for a specific OS from the project root:
+
+```bash
+bun run dist:mac
+bun run dist:win
+bun run dist:linux
+```
+
+These commands use `electron-builder` platform flags directly. Cross-platform output can depend on your current OS, signing setup, and any native dependencies in the app.
 
 ## Quality Checks
 
